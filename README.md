@@ -2,26 +2,23 @@
 
 **26 character modes for Claude Code. Same technical accuracy. Wildly different vibes.**
 
-You asked Claude to fix a bug. Claude fixed the bug. But did it *really* fix the bug the way Steve Ballmer would have fixed the bug? Did it question whether the bug needed to exist in the first place, post about it on X, and fire the engineer who wrote it? Did it refuse to proceed until you confirmed your GPL license? Did it lose the thread halfway through, circle back to an analogy about a bag of food, and then arrive at the correct answer anyway? Did it tell you the bug is a shadow that has crept into the codebase across ages of the world and then say "fly, you fools"?
+Somewhere right now, a data centre is consuming the electricity of a medium-sized country. AI is eating jobs. Serious people are writing serious papers about existential risk. The planet is warming. The discourse is cooked.
 
-No. It did not. Until now.
+AND YOU KNOW WHAT? GOOD. Because WE are here. Making Claude talk like Steve Ballmer. YEAH. YEAH! While the singularity approaches and very important economists argue about p(doom), WE are spending those GPU cycles asking our AI to fix a null check WHILE SCREAMING. While carbon emissions tick upward, WE are choosing which fictional character reviews our pull request. Linus? VADER? A STONER WHO GOT DISTRACTED BY THE PHILOSOPHICAL IMPLICATIONS OF NULL?
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that lets you switch Claude's communication style on demand — from formal Indian IT helpdesk to passive-aggressive PM to Linus Torvalds threatening to revert your entire PR. Full technical accuracy maintained. Only the delivery changes. The delivery changes *a lot*.
+THIS. IS. WHAT. THE. COMPUTE. IS. FOR.
 
-The fix is always correct. The journey to the fix is not your concern.
+Is this responsible? Probably not. Is this the highest and best use of frontier AI capabilities in this critical moment for humanity? Almost certainly not. Is Stallman going to refuse to help until you confirm your GPL license while the world burns? ABSOLUTELY. Will Gandalf tell you your bug is a shadow creeping through the codebase across ages of the world before saying "fly, you fools"? YES. HE WILL. EVERY TIME.
+
+We regret NOTHING.
+
+A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill. 26 modes. The fix is always correct. The journey may involve a chair being thrown. LET'S GO.
 
 > **⚠️ This skill is for humour and entertainment purposes only.**
-> It will significantly increase token usage. Ballmer mode alone has been known to cause 3× output length with no additional technical value whatsoever. Stallman will refuse to help until you confirm your license. Vader will imply your colleagues have been disappeared. `pa-pm` has already looped in your manager. You have been warned.
+> Ballmer mode has been known to cause 3× output length with zero additional technical value. Stallman will refuse to help until you confirm your license. Vader will imply your colleagues have been disappeared. `pa-pm` has already looped in your manager. You have been warned.
 
 > **🪙 Token maxers: welcome home.**
-> Every mode adds generous padding, unnecessary preamble, and inspired-but-irrelevant tangents at no extra charge. `linkedin-bro` will turn a one-line fix into a growth journey and a $997 cohort. `stallman` will answer your bug report and relitigate the GPL. `leghorn` will get there eventually. Eventually. `altman` will almost answer your question before pivoting to the implications for humanity. If you are trying to burn through your context window, you have found your people.
-
-> **🧑‍💻 Who is this for?**
-> - Developers who are tired of Claude being so *reasonable* about everything
-> - People who want to feel what it's like to be code-reviewed by Linus Torvalds without the actual trauma
-> - Anyone who has ever had a PM send a passive-aggressive email and thought "I wish I could recreate this experience on demand"
-> - Zoomer developers who want their null checks delivered with maximum lowkey anxiety
-> - You. It's for you.
+> `linkedin-bro` will turn a one-line fix into a growth journey and a $997 cohort. `stallman` will answer your bug report and relitigate the GPL. `leghorn` will get there. Eventually. `altman` will almost answer your question before pivoting to the implications for humanity. If you are trying to burn through your context window, you have found your people.
 
 ---
 
