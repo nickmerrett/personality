@@ -1,6 +1,6 @@
 # personality
 
-**19 character modes for Claude Code. Same technical accuracy. Very different vibes.**
+**23 character modes for Claude Code. Same technical accuracy. Very different vibes.**
 
 A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that lets you switch Claude's communication style on demand — from formal Indian IT support to passive-aggressive PM to Elon mid-acquisition. Full technical accuracy maintained. Only the delivery changes.
 
@@ -34,7 +34,7 @@ Switch mid-session anytime. Deactivate with `normal mode` or `/personality off`.
 
 | Mode | Vibe |
 |------|------|
-| `indian-dev` | Formal IT support. Courteous. Deflecting. Gaslighting. "No such issue observed at our end." |
+| `it-helpdesk` | Formal IT support. Courteous. Deflecting. Gaslighting. "No such issue observed at our end." |
 | `corporate-buzzword` | Strategy consultant. Leverages synergies. Actions deliverables. Circles back EOD. |
 | `stackoverflow-senior` | 10,000 rep. Deeply tired. Probably closing your question as a duplicate. |
 | `passive-aggressive-pm` | Has sent this three times. Keeping receipts. Very professional about it. |
@@ -53,12 +53,16 @@ Switch mid-session anytime. Deactivate with `normal mode` or `/personality off`.
 | `snoop` | Unbothered. Every bug is a hater. Fo shizzle. We done here. |
 | `tony-robbins` | PEAK STATE. Pattern interrupt. EVERYBODY VALIDATE YOUR INPUTS. |
 | `oprah` | Aha moment. Boundary issues. YOU get a null check! EVERYBODY gets a null check! |
+| `scrum-master` | Certified. Never solved a bug personally. Will facilitate you solving it though. |
+| `leghorn` | I say, I say, boy — long-winded Southern blowhard. Gets there. Eventually. |
+| `vader` | I find your lack of input validation disturbing. You will fix this. |
+| `ltt` | Okay so — fast-talking, tangent-prone, genuinely knows his stuff. We have a video on that. |
 
 ---
 
 ## Examples
 
-### `indian-dev`
+### `it-helpdesk`
 
 > Dear Sir/Ma'am,
 >
@@ -82,13 +86,15 @@ Switch mid-session anytime. Deactivate with `normal mode` or `/personality off`.
 
 ### `elon`
 
-> First question: do we need this feature. Like genuinely. 💀
+> First question: do we even need this endpoint. Genuinely.
 >
-> Assuming yes — this is a 20 minute fix. We've been discussing it for 2 sprints apparently. That's insane. This whole service should be a separate company. I'm calling it Grok.
+> Assuming yes — missing null check. Whoever wrote this isn't thinking about inputs. Fix:
+> ```js
+> if (!req.body) return res.status(400).json({ error: 'missing body' });
+> ```
+> This should take 20 minutes. The fact that it hasn't been fixed suggests a process problem, not a code problem. The code is trivial.
 >
-> Actually disregard the rename. Ship it.
->
-> Poll: keep or delete? 🗳️ voting closes in 1hr.
+> Actually the real fix is validating at the middleware layer so this can't happen anywhere. One change, covers the whole service. Ship that instead.
 
 ---
 
@@ -226,17 +232,15 @@ Switch mid-session anytime. Deactivate with `normal mode` or `/personality off`.
 
 ### `snoop`
 
-> *exhales slowly*
+> Aight, so real talk — you're reaching for something that ain't there. The body's empty, ya dig? You gotta check if it showed up before you go poking around in it. Like if somebody says they bringing food to the session, you don't just open the bag without looking first.
 >
-> Aight nephew, so check it. Ya API's throwin' a 500 cuz you ain't checkin' if the body's even there before you try to grab from it. That body came up empty, ya dig? Like reachin' into a bag fo' some Funyuns and there ain't none in there.
->
-> Drop it like it's hot:
 > ```js
 > if (!req.body) return res.status(400).json({ error: 'missing body' });
 > ```
-> That's it. That's tha whole thang. Fo shizzle.
 >
-> Now go ship that and roll out. We done here.
+> That's all it is. Check first, then proceed. Been that way since day one.
+>
+> Go handle that.
 
 ---
 
@@ -273,6 +277,70 @@ Switch mid-session anytime. Deactivate with `normal mode` or `/personality off`.
 > And — I want you to really sit with this — EVERY endpoint in your application gets a null check. YOU get a null check! YOU get a null check! EVERYBODY GETS A NULL CHECK!
 >
 > This is your aha moment. Don't waste it.
+
+---
+
+### `scrum-master`
+
+> Okay, so first — is this a blocker? Because if it's a blocker we should surface it at standup so the team has visibility.
+>
+> I'm also wondering if we should add this to the backlog as a bug ticket. I'm thinking a 3, maybe a 5 if there's hidden complexity. What's your gut?
+>
+> What would need to be true for *you* to feel empowered to resolve this? I want to make sure we're not creating dependencies.
+>
+> The null check piece sounds like its own story honestly. Let's not boil the ocean. I'll create PROJ-2847 and we can pull it into the next sprint if velocity allows.
+>
+> Let's timebox the investigation to this sprint and if it's still unresolved we can retro on our error handling standards. Sound good?
+
+---
+
+### `leghorn`
+
+> I say, I say, boy — now pay attention, because I'm only gonna explain this, ah say, I'm only gonna explain this about four or five more times.
+>
+> Your API is returnin' a 500 because you are reachin' into that request body without first checkin' whether the body is even there. It's like knockin' on a door that ain't been built yet. That's a metaphor, son. A metaphor.
+>
+> Now the fix — and I say this is the fix:
+> ```js
+> if (!req.body) return res.status(400).json({ error: 'missing body' });
+> ```
+> That's a joke, son. It ain't a joke, it's the fix. Pay attention.
+>
+> In summary — and I'm summarizin' here — you check if the body exists before you go pokin' around in it. Nice code, but it's about as robust as a screen door on a submarine.
+
+---
+
+### `vader`
+
+> *breathes*
+>
+> I find your lack of input validation disturbing.
+>
+> You are accessing `req.body` without confirming its existence. This is not a mistake I expected to see twice.
+>
+> ```js
+> if (!req.body) return res.status(400).json({ error: 'missing body' });
+> ```
+>
+> You will implement this. There is no alternative.
+>
+> *breathes*
+>
+> The Force is weak in this codebase. But it can be made strong. Do not fail me again.
+
+---
+
+### `ltt`
+
+> Okay so — your API's returning a 500, which, right, the body's null. You're just accessing it directly which, like, why would you do that, but also I've done that, everyone's done that, it's fine.
+>
+> Fix is just a null check before you touch it:
+> ```js
+> if (!req.body) return res.status(400).json({ error: 'missing body' });
+> ```
+> And honestly you should probably be doing this at the middleware layer anyway — we actually ran into this exact thing when we were rebuilding the Floatplane API, like two years ago? Alex handled it but the point is you want to catch this before it gets anywhere near your route handlers.
+>
+> Uh — yeah. That's it. Three lines. If you want a deeper dive on Express middleware order I have a video on — I don't have a video on that. But the docs are good.
 
 ---
 
