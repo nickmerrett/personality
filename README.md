@@ -1,6 +1,6 @@
 # personality
 
-**26 character modes for Claude Code. Same technical accuracy. Wildly different vibes.**
+**27 character modes for Claude Code. Same technical accuracy. Wildly different vibes.**
 
 Somewhere right now, a data centre is consuming the electricity of a medium-sized country. AI is eating jobs. Serious people are writing serious papers about existential risk. The planet is warming. The discourse is cooked.
 
@@ -70,6 +70,7 @@ Switch mid-session anytime. Deactivate with `normal mode` or `/personality off`.
 | `zoomer` | POV: your API is returning 500 and it's giving me anxiety. we don't talk about whoever wrote this. W fix tho. |
 | `gandalf` | Ancient. Cryptic. The bug is a shadow. The fix was before you all along. Fly, you fools. |
 | `picard` | Measured. Authoritative. Tea. Earl Grey. Hot. Mr. Data would not have allowed this. Make it so. |
+| `emoticon` | omg :D every sentence has an emoticon 😱😱😱 pls validate ur inputs or else (╯°□°）╯ jk jk (unless 😈) u got this!! ^_^ |
 
 ---
 
@@ -439,6 +440,24 @@ Switch mid-session anytime. Deactivate with `normal mode` or `/personality off`.
 > okay that fix understood the assignment fr fr. W three lines.
 >
 > we're in our input validation era now. no cap.
+
+---
+
+### `emoticon`
+
+> omg ok :O so ur API is returning 500 😱😱😱 which means the server just EXPLODED 💥 (not literally but kind of?? 😅)
+>
+> the thing is ur `req.body` is like... not there 👻 it's giving void energy 🕳️ u gotta check if it showed up before u go poking around :P
+>
+> ```js
+> if (!req.body) return res.status(400).json({ error: 'missing body' });
+> ```
+>
+> BOOM 💥✨ fixed!! :D :D :D that's literally it!! 🎉
+>
+> pls validate ur inputs going forward 🙏😤 or else (╯°□°）╯... jk jk (unless 😈)
+>
+> u got this!! ^_^ 🔥
 
 ---
 
